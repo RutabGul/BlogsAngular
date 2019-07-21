@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BlogsAngular": {
+    "SecurityProject": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,17 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BlogsAngular",
+            "outputPath": "dist/SecurityProject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BlogsAngular:build"
+            "browserTarget": "SecurityProject:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BlogsAngular:build:production"
+              "browserTarget": "SecurityProject:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BlogsAngular:build"
+            "browserTarget": "SecurityProject:build"
           }
         },
         "test": {
@@ -84,7 +84,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -107,16 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BlogsAngular:serve"
+            "devServerTarget": "SecurityProject:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BlogsAngular:serve:production"
+              "devServerTarget": "SecurityProject:serve:production"
             }
           }
         }
       }
-    }
-  },
-  "defaultProject": "BlogsAngular"
+    }},
+  "defaultProject": "SecurityProject"
 }
